@@ -1,0 +1,114 @@
+{
+  "theme": "LIGHT",
+  "archetype": "1 (Organic & Earthy)",
+  "vibe": "Professional Medical, Trustworthy, Modern, Clean, Authoritative",
+  "colors": {
+    "background": "#F8FAF8",
+    "surface": "#FFFFFF",
+    "primary": "#246B24",
+    "primary_hover": "#1B4D1B",
+    "secondary": "#E0EBE0",
+    "accent": "#FFB800",
+    "text_main": "#0A1F0A",
+    "text_muted": "#4B6B4B",
+    "border": "#E2E8F0"
+  },
+  "typography": {
+    "headings_font": "Cabinet Grotesk",
+    "body_font": "Manrope",
+    "h1": "text-5xl sm:text-6xl tracking-tight font-black",
+    "h2": "text-4xl sm:text-5xl tracking-tight font-bold",
+    "h3": "text-2xl sm:text-3xl tracking-tight font-semibold",
+    "body_large": "text-lg sm:text-xl leading-relaxed text-muted-foreground",
+    "body": "text-base leading-relaxed text-muted-foreground"
+  },
+  "layout_spacing": {
+    "section_padding": "py-24 sm:py-32",
+    "container_padding": "px-6 sm:px-12 lg:px-24",
+    "gap_large": "gap-12 sm:gap-16",
+    "border_radius": "rounded-2xl"
+  },
+  "components": {
+    "navbar": {
+      "style": "Glassmorphism: backdrop-blur-xl bg-white/80 border-b border-[#246B24]/10",
+      "behavior": "Sticky top-0 z-50",
+      "links": "font-semibold text-sm tracking-wide text-[#0A1F0A] hover:text-[#246B24] transition-colors"
+    },
+    "hero_carousel": {
+      "library": "Shadcn Carousel (Embla)",
+      "style": "Full width, min-h-[80vh] md:min-h-[90vh] relative",
+      "overlay": "bg-gradient-to-r from-black/70 via-black/40 to-transparent",
+      "text_alignment": "left",
+      "content_padding": "p-12 md:p-24 flex flex-col justify-center h-full"
+    },
+    "stats_section": {
+      "style": "Grid layout grid-cols-2 md:grid-cols-4 gap-8 bg-[#246B24] text-white py-16",
+      "animation": "Framer motion counter for numbers",
+      "typography": "text-4xl md:text-5xl font-black mb-2"
+    },
+    "services_grid": {
+      "style": "Bento grid (Tetris mode) grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "card_style": "bg-white p-8 rounded-2xl border border-border/50 hover:border-[#246B24]/30 hover:shadow-xl transition-all duration-300",
+      "icon_style": "text-[#246B24] w-12 h-12 mb-6"
+    },
+    "testimonials": {
+      "style": "Marquee or Horizontal scroll (Embla)",
+      "card_style": "bg-[#F8FAF8] p-8 rounded-2xl min-w-[300px] border border-[#246B24]/10"
+    },
+    "appointment_form": {
+      "style": "Two-column layout. Left side text/imagery, right side form.",
+      "form_container": "bg-white p-8 md:p-12 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.04)]",
+      "inputs": "Shadcn inputs customized with h-12 rounded-lg bg-[#F8FAF8] border-none focus-visible:ring-[#246B24]",
+      "submit_button": "w-full h-14 rounded-full bg-[#246B24] hover:bg-[#1B4D1B] text-white font-bold text-lg"
+    },
+    "footer": {
+      "style": "bg-[#0A1F0A] text-white py-20",
+      "layout": "4-column grid",
+      "text": "text-white/70 hover:text-white"
+    }
+  },
+  "media_urls": [
+    {
+      "category": "hero",
+      "description": "Doctor examining patient eye",
+      "url": "https://images.unsplash.com/photo-1766310549795-dd0fc75d499f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxvcGh0aGFsbW9sb2dpc3QlMjBleWUlMjBkb2N0b3IlMjBjbGluaWN8ZW58MHx8fHwxNzc3NTYzNjAyfDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "hero",
+      "description": "Medical professionals in hallway",
+      "url": "https://images.unsplash.com/photo-1755189118414-14c8dacdb082?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHw0fHxoYXBweSUyMHBhdGllbnQlMjBoZWFsdGhjYXJlJTIwY2xpbmljfGVufDB8fHx8MTc3NzU2MzYwM3ww&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "hero",
+      "description": "Modern medical center exterior",
+      "url": "https://images.unsplash.com/photo-1769698678497-c41f0ab47c3e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwyfHxtZWRpY2FsJTIwY2xpbmljJTIwYnVpbGRpbmclMjBleHRlcmlvcnxlbnwwfHx8fDE3Nzc1NjM2MDd8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "about",
+      "description": "Patient consulting doctor",
+      "url": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwzfHxoYXBweSUyMHBhdGllbnQlMjBoZWFsdGhjYXJlJTIwY2xpbmljfGVufDB8fHx8MTc3NzU2MzYwM3ww&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "services",
+      "description": "Abstract optics and eye",
+      "url": "https://images.unsplash.com/photo-1647467531427-a808b1a2f55f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxleWUlMjBnbGFzc2VzJTIwb3B0aWNzJTIwbWFjcm98ZW58MHx8fHwxNzc3NTYzNjA3fDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "locations",
+      "description": "White clinic exterior",
+      "url": "https://images.unsplash.com/photo-1770548037928-a29bfacc84ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY2xpbmljJTIwYnVpbGRpbmclMjBleHRlcmlvcnxlbnwwfHx8fDE3Nzc1NjM2MDd8MA&ixlib=rb-4.1.0&q=85"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons.",
+    "Install 'framer-motion' for reveal animations and the animated stats counters.",
+    "Install '@fontsource/cabinet-grotesk' and '@fontsource/manrope' or add to index.css.",
+    "Use pure HTML/Tailwind for the bento grids, do not rely on Shadcn Card if it restricts layout.",
+    "Use Shadcn UI for the Appointment Booking Form (Input, Select, Button) but remove the vercel default look and make it match the design system.",
+    "Ensure 'data-testid' is added to all interactive elements (buttons, links, form inputs).",
+    "Hero carousel MUST use Shadcn Carousel, filled 100% width and height. Images MUST have a bg-black/40 overlay to ensure white text is readable.",
+    "Use the exact media URLs provided in this JSON. Do not use placeholders.",
+    "Follow the generous spacing logic: use py-24 or py-32 between major sections.",
+    "Use the Primary Color (#246B24) strictly for CTA buttons and key accent icons. Do not overuse it."
+  ]
+}
