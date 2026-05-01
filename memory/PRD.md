@@ -28,6 +28,16 @@ Create a website for ophthalmologist inspired by https://sharpsight.in - keep th
 - Fonts: Plus Jakarta Sans (headings), Manrope (body)
 - Style: Clean, medical professional, white/green theme
 
+## Branding & Contact Info
+- Brand: MeeraSight — Expert Eye Care Solutions
+- Doctor: Dr. Sonia Sharma
+- Address: C5C-14A, Janak Puri, New Delhi
+- Phone: +91-11-47092310
+- WhatsApp: +91-7428728458
+- Email: meerasight@gmail.com
+- Hours: Mon–Wed/Fri–Sat 9am–1:30pm, 6–8pm | Sunday 9am–12noon | Thursday: CLOSED
+- Colors: Purple #601E8E + Teal #00A8D7
+
 ## What's Been Implemented (Date: 2025-05)
 - [x] Sticky navbar with top info bar (phone/email/blog links)
 - [x] Hero carousel with 3 slides, auto-rotate, prev/next, dots
