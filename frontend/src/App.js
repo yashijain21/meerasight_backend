@@ -9,9 +9,11 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import BlogSection from "./components/BlogSection";
 import AppointmentSection from "./components/AppointmentSection";
 import Footer from "./components/Footer";
+import ServicePage from "./components/ServicePage";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const Home = () => (
-  <div className="bg-[#F8FAF8]">
+  <div className="bg-[#FAF8FF]">
     <Navbar />
     <HeroCarousel />
     <VisionSection />
@@ -21,6 +23,7 @@ const Home = () => (
     <BlogSection />
     <AppointmentSection />
     <Footer />
+    <WhatsAppButton />
   </div>
 );
 
@@ -30,6 +33,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>

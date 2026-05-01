@@ -9,8 +9,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #F8FAF8;
-  color: #0A1F0A;
+  background-color: #FAF8FF;
+  color: #1A0A2E;
 }
 
 .App {
@@ -70,8 +70,8 @@ body {
 }
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(36, 107, 36, 0.15);
-  border-color: rgba(36, 107, 36, 0.3);
+  box-shadow: 0 20px 40px rgba(96, 30, 142, 0.15);
+  border-color: rgba(96, 30, 142, 0.3);
 }
 
 /* Testimonial card */

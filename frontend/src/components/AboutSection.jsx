@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: 22, suffix: "+", label: "Years of\nExperience" },
-  { value: 20, suffix: "+", label: "Specialised\nTreatments" },
-  { value: 50, suffix: "+", label: "Expert\nDoctors" },
-  { value: 500, suffix: "K+", label: "Successful\nSurgeries" },
+  { value: 15, suffix: "+", label: "Years of\nExperience" },
+  { value: 10, suffix: "+", label: "Specialised\nTreatments" },
+  { value: 5000, suffix: "+", label: "Happy\nPatients" },
+  { value: 98, suffix: "%", label: "Success\nRate" },
 ];
 
 function CountUp({ target, suffix, active }) {
@@ -41,8 +41,7 @@ export default function AboutSection() {
 
   return (
     <>
-      {/* About Content */}
-      <section id="about" data-testid="about-section" className="bg-[#F8FAF8] py-24 px-6">
+      <section id="about" data-testid="about-section" className="bg-[#FAF8FF] py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
@@ -56,14 +55,14 @@ export default function AboutSection() {
               <div className="rounded-3xl overflow-hidden aspect-[4/5] max-h-[580px]">
                 <img
                   src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwzfHxoYXBweSUyMHBhdGllbnQlMjBoZWFsdGhjYXJlJTIwY2xpbmljfGVufDB8fHx8MTc3NzU2MzYwM3ww&ixlib=rb-4.1.0&q=85"
-                  alt="Patient consulting doctor"
+                  alt="Dr. Sonia Sharma with patient"
                   className="w-full h-full object-cover"
                 />
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-4 md:right-6 bg-white rounded-2xl shadow-xl p-5 border border-[#E0EBE0]">
-                <p className="font-heading font-black text-[#246B24] text-3xl leading-none">22+</p>
-                <p className="text-[#4B6B4B] text-xs font-semibold mt-1">Years of<br/>Excellence</p>
+              <div className="absolute -bottom-6 right-6 bg-white rounded-2xl shadow-xl p-5 border border-purple-100">
+                <p className="font-heading font-black text-[#601E8E] text-3xl leading-none">15+</p>
+                <p className="text-[#5C4B6B] text-xs font-semibold mt-1">Years of<br />Excellence</p>
               </div>
             </motion.div>
 
@@ -74,22 +73,36 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-[#246B24] text-sm font-bold uppercase tracking-widest mb-3">Our Story & Motivation</p>
-              <h2 className="font-heading font-bold text-[#0A1F0A] text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
-                Backed by strong motive, <span className="text-[#246B24]">we lead Ophthalmology.</span>
+              <p className="text-[#00A8D7] text-sm font-bold uppercase tracking-widest mb-3">Our Story & Motivation</p>
+              <h2 className="font-heading font-bold text-[#1A0A2E] text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+                Backed by strong motive,{" "}
+                <span className="text-[#601E8E]">we lead Ophthalmology.</span>
               </h2>
-              <p className="text-[#4B6B4B] text-base leading-relaxed mb-5">
-                Established in 2002, ClearVision Eye Hospitals is a multi-unit, multi-specialty eye care organisation dedicated to transforming lives through the gift of clear vision.
+              <p className="text-[#5C4B6B] text-base leading-relaxed mb-5">
+                MeeraSight is led by Dr. Sonia Sharma, an experienced ophthalmologist based in Janak Puri, New Delhi. The clinic is renowned for its expertise in comprehensive eye care, offering advanced treatments for a wide range of eye conditions.
               </p>
-              <p className="text-[#4B6B4B] text-base leading-relaxed mb-8">
-                With a team of highly skilled ophthalmologists and state-of-the-art diagnostic technology, we ensure precise diagnoses and effective treatments for every patient — from routine eye exams to complex surgeries.
+              <p className="text-[#5C4B6B] text-base leading-relaxed mb-8">
+                With state-of-the-art diagnostic technology and a compassionate, patient-first approach, MeeraSight ensures precise diagnoses and effective interventions — from routine eye exams to complex surgical procedures.
               </p>
+
+              {/* Doctor profile */}
+              <div className="flex items-center gap-4 p-4 bg-white rounded-2xl border border-purple-100 mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#601E8E] to-[#00A8D7] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                  SS
+                </div>
+                <div>
+                  <p className="font-heading font-bold text-[#1A0A2E] text-base">Dr. Sonia Sharma</p>
+                  <p className="text-[#5C4B6B] text-sm">Senior Ophthalmologist & Eye Surgeon</p>
+                  <p className="text-[#00A8D7] text-xs font-semibold mt-0.5">MeeraSight Eye Clinic, New Delhi</p>
+                </div>
+              </div>
+
               <a
                 href="#services"
                 data-testid="about-know-more"
-                className="inline-flex items-center gap-2 bg-[#246B24] hover:bg-[#1B4D1B] text-white font-bold px-7 py-3.5 rounded-full transition-all duration-200 text-sm"
+                className="inline-flex items-center gap-2 bg-[#601E8E] hover:bg-[#4A1570] text-white font-bold px-7 py-3.5 rounded-full transition-all duration-200 text-sm"
               >
-                Know More
+                Explore Our Services
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -100,11 +113,7 @@ export default function AboutSection() {
       </section>
 
       {/* Stats Banner */}
-      <section
-        ref={statsRef}
-        data-testid="stats-section"
-        className="bg-[#246B24] py-16 px-6"
-      >
+      <section ref={statsRef} data-testid="stats-section" className="bg-gradient-to-r from-[#601E8E] to-[#00A8D7] py-16 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, i) => (
             <motion.div
