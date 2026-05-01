@@ -60,11 +60,13 @@ Create a website for ophthalmologist inspired by https://sharpsight.in - keep th
 - [x] Backend API
 
 ### P1 (Next Phase)
+- [x] Individual service pages (all 10 services with full content)
+- [x] WhatsApp floating button
+- [x] Calendar-based appointment booking (4-step: service → date/time → details → confirm)
+- [x] /api/slots endpoint with opening hours logic (Thursday CLOSED, morning/evening sessions)
 - [ ] Admin panel to view/manage appointments
-- [ ] Individual service pages (Cataract page, LASIK page, etc.)
-- [ ] Doctor profile pages
-- [ ] Blog detail pages
 - [ ] Email notifications for appointments (SendGrid/Resend)
+- [ ] Blog detail pages
 
 ### P2 (Future)
 - [ ] Patient portal with login
