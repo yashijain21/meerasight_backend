@@ -2,6 +2,7 @@ from fastapi import FastAPI, APIRouter, HTTPException, Query
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from pymongo.errors import PyMongoError
 import os
 import logging
 from pathlib import Path
@@ -15,8 +16,10 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
 mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
+client = AsyncIOMotorClient(mongo_url, serverSelectionTimeoutMS=5000)
 db = client[os.environ['DB_NAME']]
+appointments_collection = db[os.environ.get("APPOINTMENTS_COLLECTION", "appointments")]
+contacts_collection = db[os.environ.get("CONTACTS_COLLECTION", "contacts")]
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
@@ -110,13 +113,17 @@ async def get_slots(date: str = Query(..., description="Date in YYYY-MM-DD forma
     if not all_times:
         return SlotsResponse(date=date, closed=True, slots=[])
 
-    # Find already-booked slots for this date
-    booked_cursor = db.appointments.find(
-        {"preferred_date": date, "status": {"$ne": "cancelled"}},
-        {"_id": 0, "time_slot": 1}
-    )
-    booked_docs = await booked_cursor.to_list(1000)
-    booked_set = {doc["time_slot"] for doc in booked_docs if doc.get("time_slot")}
+    try:
+        # Find already-booked slots for this date
+        booked_cursor = appointments_collection.find(
+            {"preferred_date": date, "status": {"$ne": "cancelled"}},
+            {"_id": 0, "time_slot": 1}
+        )
+        booked_docs = await booked_cursor.to_list(1000)
+        booked_set = {doc["time_slot"] for doc in booked_docs if doc.get("time_slot")}
+    except PyMongoError as exc:
+        logger.exception("Database error while fetching slots")
+        raise HTTPException(status_code=503, detail=f"Database connection failed: {str(exc)}")
 
     slots = [
         SlotInfo(time=t, display=fmt_time(t), available=(t not in booked_set))
@@ -128,7 +135,7 @@ async def get_slots(date: str = Query(..., description="Date in YYYY-MM-DD forma
 async def create_appointment(data: AppointmentCreate):
     # Check slot not already taken
     if data.time_slot and data.preferred_date:
-        existing = await db.appointments.find_one({
+        existing = await appointments_collection.find_one({
             "preferred_date": data.preferred_date,
             "time_slot": data.time_slot,
             "status": {"$ne": "cancelled"}
@@ -137,23 +144,23 @@ async def create_appointment(data: AppointmentCreate):
             raise HTTPException(status_code=409, detail="This time slot is already booked. Please choose another.")
 
     appt = Appointment(**data.model_dump())
-    await db.appointments.insert_one(appt.model_dump())
+    await appointments_collection.insert_one(appt.model_dump())
     return appt
 
 @api_router.get("/appointments", response_model=List[Appointment])
 async def get_appointments():
-    items = await db.appointments.find({}, {"_id": 0}).to_list(1000)
+    items = await appointments_collection.find({}, {"_id": 0}).to_list(1000)
     return items
 
 @api_router.post("/contacts", response_model=Contact)
 async def create_contact(data: ContactCreate):
     contact = Contact(**data.model_dump())
-    await db.contacts.insert_one(contact.model_dump())
+    await contacts_collection.insert_one(contact.model_dump())
     return contact
 
 @api_router.get("/contacts", response_model=List[Contact])
 async def get_contacts():
-    items = await db.contacts.find({}, {"_id": 0}).to_list(1000)
+    items = await contacts_collection.find({}, {"_id": 0}).to_list(1000)
     return items
 
 
