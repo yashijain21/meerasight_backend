@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 const serviceLinks = [
   { label: "Retina Services", slug: "retina" },
   { label: "Refractive / LASIK", slug: "refractive" },
@@ -32,11 +32,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img
-              src="https://customer-assets.emergentagent.com/job_vision-clinic-10/artifacts/rxtbd93l_download.png"
-              alt="MeeraSight Logo"
-              className="h-16 w-auto object-contain mb-5 brightness-0 invert"
-            />
+            <Link to="/" data-testid="navbar-logo" className="flex items-center">
+                        <img
+                          src="https://customer-assets.emergentagent.com/job_vision-clinic-10/artifacts/rxtbd93l_download.png"
+                          alt="MeeraSight Logo"
+                          className="h-14 w-auto object-contain"
+                        />
+                      </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               Expert Eye Care Solutions by Dr. Sonia Sharma. Serving patients in Janak Puri, New Delhi with compassionate and advanced ophthalmology care.
             </p>

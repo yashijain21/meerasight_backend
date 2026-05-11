@@ -17,10 +17,54 @@ const Home = () => (
     <Navbar />
     <HeroCarousel />
     <VisionSection />
-    <AboutSection />
     <ServicesSection />
     <TestimonialsSection />
     <BlogSection />
+    <AppointmentSection />
+    <Footer />
+    <WhatsAppButton />
+  </div>
+);
+
+const AboutPage = () => (
+  <div className="bg-[#FAF8FF]">
+    <Navbar />
+    <AboutSection />
+    <Footer />
+    <WhatsAppButton />
+  </div>
+);
+
+const SpecialtiesPage = () => (
+  <div className="bg-[#FAF8FF]">
+    <Navbar />
+    <ServicesSection />
+    <Footer />
+    <WhatsAppButton />
+  </div>
+);
+
+const TestimonialsPage = () => (
+  <div className="bg-[#FAF8FF]">
+    <Navbar />
+    <TestimonialsSection />
+    <Footer />
+    <WhatsAppButton />
+  </div>
+);
+
+const BlogPage = () => (
+  <div className="bg-[#FAF8FF]">
+    <Navbar />
+    <BlogSection />
+    <Footer />
+    <WhatsAppButton />
+  </div>
+);
+
+const ContactPage = () => (
+  <div className="bg-[#FAF8FF]">
+    <Navbar />
     <AppointmentSection />
     <Footer />
     <WhatsAppButton />
@@ -33,6 +77,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/specialties" element={<SpecialtiesPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="*" element={<Home />} />
         </Routes>

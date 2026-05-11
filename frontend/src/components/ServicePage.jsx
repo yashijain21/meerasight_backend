@@ -10,7 +10,7 @@ const serviceData = {
   retina: {
     title: "Retina Services",
     tagline: "Advanced diagnosis and treatment for all retinal disorders",
-    heroImage: "https://images.unsplash.com/photo-1766310549795-dd0fc75d499f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://ophthalmicconsultants.com/wp-content/uploads/2023/05/retina-3-scaled.jpg",
     overview: "The retina is a thin layer of tissue at the back of the eye responsible for converting light into visual signals. Retinal diseases can affect your vision significantly and require prompt specialist care. At MeeraSight, Dr. Sonia Sharma provides comprehensive retina services using state-of-the-art diagnostic and treatment equipment.",
     conditions: [
       "Diabetic Retinopathy — damage to retinal blood vessels caused by diabetes",
@@ -35,7 +35,7 @@ const serviceData = {
   refractive: {
     title: "Refractive Services (LASIK)",
     tagline: "Permanent vision correction — say goodbye to glasses forever",
-    heroImage: "https://images.unsplash.com/photo-1647467531427-a808b1a2f55f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://www.laxmieye.org/blog/wp-content/uploads/2023/10/Lasik-Surgery.jpg",
     overview: "Refractive errors including myopia (short-sightedness), hyperopia (long-sightedness), and astigmatism are among the most common eye conditions. Modern refractive surgery offers permanent correction, freeing you from the dependence on glasses or contact lenses. MeeraSight offers the latest blade-free LASIK and other refractive procedures.",
     conditions: [
       "Myopia (Short-sightedness) — difficulty seeing distant objects",
@@ -58,7 +58,7 @@ const serviceData = {
   pediatric: {
     title: "Paediatric Ophthalmology",
     tagline: "Specialized eye care for children — protecting their future vision",
-    heroImage: "https://images.unsplash.com/photo-1755189118414-14c8dacdb082?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://www.eyecliniclondon.com/blog/wp-content/uploads/2025/11/Children-Consultation-1.webp",
     overview: "Children's eyes are still developing and require specialized care. Early detection and treatment of eye problems in childhood is critical to ensure proper visual development. Dr. Sonia Sharma at MeeraSight is experienced in managing all paediatric eye conditions with a gentle, child-friendly approach.",
     conditions: [
       "Amblyopia (Lazy Eye) — reduced vision in one eye due to abnormal development",
@@ -83,7 +83,7 @@ const serviceData = {
   "ocular-surface": {
     title: "Ocular Surface Diseases",
     tagline: "Comprehensive management of dry eye and surface disorders",
-    heroImage: "https://images.unsplash.com/photo-1770220174562-be196295d0a1?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://cdn-bpeep.nitrocdn.com/vKDgvNsnOrwkqofIfANgdsTsirhKXQgp/assets/images/optimized/rev-aeaf0cb/dryeyecenterofmd.com/wp-content/uploads/2023/05/OCULAR-SURFACE-DISEASE-OSD-untreated.jpg",
     overview: "The ocular surface includes the cornea, conjunctiva, and tear film. Disorders affecting these structures can cause significant discomfort and impact vision quality. MeeraSight provides expert diagnosis and management of all ocular surface conditions.",
     conditions: [
       "Dry Eye Syndrome (DES) — insufficient or poor-quality tears",
@@ -107,7 +107,7 @@ const serviceData = {
   keratoconus: {
     title: "Keratoconus Treatment",
     tagline: "Advanced diagnosis and management for corneal ectasia",
-    heroImage: "https://images.unsplash.com/photo-1770217757395-f14e9c2f601b?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://vijayanethralaya.com/wp-content/uploads/2024/05/maxresdefault-1.jpg",
     overview: "Keratoconus is a progressive eye condition where the cornea thins and gradually bulges outward into a cone-like shape. This distortion of the cornea causes blurred vision, light sensitivity, and glare. MeeraSight offers advanced topography-based diagnosis and the latest treatment options including corneal cross-linking.",
     conditions: [
       "Progressive Keratoconus — gradual corneal thinning and bulging",
@@ -128,7 +128,7 @@ const serviceData = {
   glaucoma: {
     title: "Glaucoma Services",
     tagline: "Early detection and management of the silent thief of sight",
-    heroImage: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://www.thindeyehospital.org/wp-content/uploads/2024/01/gloucoma.jpg",
     overview: "Glaucoma is a group of eye conditions that damage the optic nerve, usually associated with elevated eye pressure (IOP). It's often asymptomatic in early stages, leading to irreversible vision loss if untreated. At MeeraSight, we emphasize early detection through regular screenings and offer comprehensive management.",
     conditions: [
       "Primary Open-Angle Glaucoma — most common, slow progressive damage",
@@ -151,7 +151,7 @@ const serviceData = {
   cornea: {
     title: "Cornea Services",
     tagline: "Specialized care for corneal diseases and transplantation",
-    heroImage: "https://images.unsplash.com/photo-1769698678497-c41f0ab47c3e?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://morriseyegroup.com/wp-content/uploads/2024/06/image-43.png",
     overview: "The cornea is the clear, dome-shaped surface at the front of the eye. Corneal diseases can significantly impair vision and quality of life. MeeraSight offers expert diagnosis and treatment of all corneal conditions, including corneal transplantation procedures.",
     conditions: [
       "Corneal Ulcer — infection causing corneal tissue breakdown",
@@ -173,7 +173,7 @@ const serviceData = {
   "contact-lens": {
     title: "Contact Lens Clinic",
     tagline: "Expert fitting and prescription of therapeutic & cosmetic lenses",
-    heroImage: "https://images.unsplash.com/photo-1770548037928-a29bfacc84ea?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://my.clevelandclinic.org/-/scassets/images/org/health/articles/10737-contacts",
     overview: "The Contact Lens Clinic at MeeraSight provides expert evaluation, fitting, and prescription of contact lenses for a wide range of vision needs. From standard soft lenses to complex rigid gas-permeable and scleral lenses, our specialists ensure optimal fit and vision.",
     conditions: [
       "Myopia — soft contact lenses for distance correction",
@@ -196,7 +196,7 @@ const serviceData = {
   "comprehensive-exam": {
     title: "Comprehensive Eye Examination",
     tagline: "Complete evaluation of your eye health from top to bottom",
-    heroImage: "https://images.unsplash.com/photo-1758206524001-56b1b1ec72cf?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8i0p0FVAQwIYNpldE_Z0Zyb9z-od8XvAbjA&s",
     overview: "A comprehensive eye examination goes beyond simply checking your glasses prescription. It includes a thorough assessment of the health of your entire visual system — detecting conditions that may not yet cause symptoms. Dr. Sonia Sharma recommends regular comprehensive eye exams for all age groups.",
     conditions: [
       "Vision problems — myopia, hyperopia, astigmatism, presbyopia",
@@ -219,7 +219,7 @@ const serviceData = {
   cataract: {
     title: "Cataract Surgery",
     tagline: "Clear vision restored with advanced phacoemulsification surgery",
-    heroImage: "https://images.unsplash.com/photo-1770217757395-f14e9c2f601b?crop=entropy&cs=srgb&fm=jpg&q=85",
+    heroImage: "https://www.ojaseyehospital.com/blog/wp-content/uploads/2025/10/8-Is-Cataract-Surgery-Painful.jpg",
     overview: "A cataract is a clouding of the natural lens inside the eye that leads to decreased vision. Cataract surgery is one of the most commonly performed and safest surgical procedures in the world. At MeeraSight, Dr. Sonia Sharma performs small-incision phacoemulsification surgery with premium intraocular lens (IOL) implants for optimal outcomes.",
     conditions: [
       "Age-related Cataract — most common, develops gradually with age",
@@ -433,3 +433,6 @@ export default function ServicePage() {
     </div>
   );
 }
+
+
+

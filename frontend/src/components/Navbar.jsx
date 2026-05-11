@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, Mail, ChevronDown, Menu, X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const services = [
   { label: "Retina Services", slug: "retina" },
@@ -16,11 +16,11 @@ const services = [
 ];
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Specialties", href: "#services", hasDropdown: true },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#appointment" },
+  { label: "About", href: "/about" },
+  { label: "Specialties", href: "/specialties", hasDropdown: true },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -50,8 +50,8 @@ export default function Navbar() {
           </span>
         </div>
         <div className="flex items-center gap-6 text-white/80">
-          <a href="#blog" className="hover:text-white transition-colors">Blogs</a>
-          <a href="#about" className="hover:text-white transition-colors">About Us</a>
+          <Link to="/blog" className="hover:text-white transition-colors">Blogs</Link>
+          <Link to="/about" className="hover:text-white transition-colors">About Us</Link>
         </div>
       </div>
 
@@ -64,13 +64,13 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           {/* Logo */}
-          <a href="/" data-testid="navbar-logo" className="flex items-center">
+          <Link to="/" data-testid="navbar-logo" className="flex items-center">
             <img
               src="https://customer-assets.emergentagent.com/job_vision-clinic-10/artifacts/rxtbd93l_download.png"
               alt="MeeraSight Logo"
               className="h-14 w-auto object-contain"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-7">
@@ -81,14 +81,14 @@ export default function Navbar() {
                 onMouseEnter={() => link.hasDropdown && setDropdownOpen(true)}
                 onMouseLeave={() => link.hasDropdown && setDropdownOpen(false)}
               >
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   data-testid={`nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                   className="flex items-center gap-1 text-sm font-semibold text-[#1A0A2E] hover:text-[#601E8E] transition-colors"
                 >
                   {link.label}
                   {link.hasDropdown && <ChevronDown size={14} />}
-                </a>
+                </Link>
 
                 {link.hasDropdown && dropdownOpen && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
@@ -109,13 +109,13 @@ export default function Navbar() {
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
-            <a
-              href="#appointment"
+            <Link
+              to="/contact"
               data-testid="navbar-book-appointment"
               className="hidden lg:flex items-center gap-2 bg-[#601E8E] hover:bg-[#4A1570] text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-purple-200"
             >
               Book Appointment
-            </a>
+            </Link>
             <button
               data-testid="mobile-menu-toggle"
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
@@ -130,14 +130,14 @@ export default function Navbar() {
         {mobileOpen && (
           <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-4 max-h-[70vh] overflow-y-auto">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="block py-3 text-sm font-semibold text-[#1A0A2E] hover:text-[#601E8E] border-b border-gray-50 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="mt-3 mb-2">
               <p className="text-xs font-bold text-[#601E8E] uppercase tracking-widest mb-2">Our Services</p>
@@ -151,14 +151,14 @@ export default function Navbar() {
                 </button>
               ))}
             </div>
-            <a
-              href="#appointment"
+            <Link
+              to="/contact"
               data-testid="mobile-book-appointment"
               className="mt-4 block text-center bg-[#601E8E] text-white font-bold py-3 rounded-full"
               onClick={() => setMobileOpen(false)}
             >
               Book Appointment
-            </a>
+            </Link>
           </div>
         )}
       </nav>
